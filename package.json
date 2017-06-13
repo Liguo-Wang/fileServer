@@ -1,12 +1,29 @@
 {
-    "name": "fileServer",
-    "version": "1.0.0",
-    "main": "index.js",
-    "author": "wangliguo",
-    "license": "MIT",
-    "dependencies": {
-        "express": "^4.15.3",
-        "serve-index": "^1.9.0",
-        "serve-static": "^1.12.3"
-    }
+  "name": "staticFileServer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm publish ."
+  },
+  "bin": {
+    "fileServer": "./index.js"
+  },
+  "author": "wangliguo",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wangliguo6666/fileServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangliguo6666/fileServer/issues"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "serve-index": "^1.9.0",
+    "serve-static": "^1.12.3"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6.0"
+  }
 }

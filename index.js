@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 const argv = process.argv.splice(2);
 const port = process.env.port || argv['1'] || 9090;
-const pubFolder = process.env.dir || argv['0'] || '/';
+const pubFolder = process.env.dir || argv['0'] || __dirname;
 const folderRWE = (7 * 8 * 8) + (0 * 8) + 0;
 console.log(`INFO: publish dir ${pubFolder}`);
 
