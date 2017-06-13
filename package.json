@@ -1,0 +1,12 @@
+{
+    "name": "fileServer",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "wangliguo",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.15.3",
+        "serve-index": "^1.9.0",
+        "serve-static": "^1.12.3"
+    }
+}
