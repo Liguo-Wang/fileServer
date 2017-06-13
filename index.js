@@ -4,18 +4,28 @@ const express = require('express');
 const serveIndex = require('serve-index');
 const serveStatic = require('serve-static');
 const fs = require('fs');
+const program = require('commander');
+
+const pkg = require('./package.json');
+
+//
+const version = pkg.version;
+
+// helper
+program
+  .version(version)
+  .usage('[options] [dir]')
+  .option('-p, --port <n>', 'set port=? (defaults 9090)', parseInt)
+  .option('-d, --dir [value]', 'the file directory of server started, default root directory: /')
+  .parse(process.argv);
 
 const app = express();
-const argv = process.argv.splice(2);
-const port = process.env.port || argv['1'] || 9090;
-const pubFolder = process.env.dir || argv['0'] || __dirname;
-const folderRWE = (7 * 8 * 8) + (0 * 8) + 0;
-console.log(`INFO: publish dir ${pubFolder}`);
+const port = program.port || 9090;
+const pubFolder = program.dir || '/';
 
-
-if (!fs.existsSync(pubFolder)) {
-  console.log(`DEBUG: make dir ${pubFolder}, with rwx as ${folderRWE}`);
-  fs.mkdirSync(pubFolder, folderRWE);
+if (!fs.statSync(pubFolder).isDirectory()) {
+  console.error('ERROR: the folder is not a directory');
+  process.exit(1);
 }
 
 app.use('/', serveIndex(pubFolder, { view: 'details', icons: true }));
