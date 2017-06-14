@@ -1,6 +1,7 @@
 # fileServer
 
-[![NPM](https://nodei.co/npm/static-file-web-server.png)]
+[![NPM](https://nodei.co/npm/staticfileserver.png)](https://nodei.co/npm/staticfileserver)
+
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
@@ -19,7 +20,7 @@ command:
 ```bash
 $ fileServer ./ 9000
 ```
-
+![image](https://github.com/wangliguo6666/fileServer/blob/master/images/hXMcswzrUf.gif)
 ## Command Line Options
 
 This generator can also be further configured with the following command line flags.
