@@ -1,5 +1,6 @@
 # fileServer
 
+[![NPM](https://nodei.co/npm/static-file-web-server.png)]
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
