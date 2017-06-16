@@ -20,7 +20,7 @@ command:
 ```bash
 $ fileServer ./ 9000
 ```
-![image](https://github.com/wangliguo6666/fileServer/blob/master/images/hXMcswzrUf.gif)
+![image](https://raw.githubusercontent.com/wangliguo6666/fileServer/master/images/hXMcswzrUf.gif)
 ## Command Line Options
 
 This generator can also be further configured with the following command line flags.
